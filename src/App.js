@@ -20,7 +20,18 @@ function App() {
       role: data.role
     }
     const selectedUser = userList.filter(u => u.id !== data.id);
-    setUserList([...selectedUser, newUser]);    
+    setUserList([...selectedUser, newUser]);
+
+    // if(data.id !== null){
+    //   let myObjPOS = userList.findIndex(obj => obj.id === data.id)
+    //   userList[myObjPOS].name = data.name;
+    //   userList[myObjPOS].email = data.email;
+    //   userList[myObjPOS].role = data.role;
+    //   setUserList(userList)
+    // }else{
+    //   setUserList([...userList, newUser]);
+    // }
+    
   }
 
   const editUser = user => {
